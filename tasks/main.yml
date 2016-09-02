@@ -1,0 +1,22 @@
+---
+- name: Remove distutils workaround if it exists
+  file:
+    path: ~/.pydistutils.cfg
+    state: absent
+  when: ansible_os_family == "Darwin"
+
+- name: Install Home Assistant via pip3
+  pip:
+    executable: /usr/local/bin/pip3
+    name: homeassistant
+  when: ansible_os_family == "Darwin"
+
+- name: Add distutils workaround for HA dependency installs
+  copy:
+    src: pydistutils.cfg
+    dest: ~/.pydistutils.cfg
+  when: ansible_os_family == "Darwin"
+
+- name: Register Home Assistant to run in the background
+  command: hass --install-osx
+  when: ansible_os_family == "Darwin"

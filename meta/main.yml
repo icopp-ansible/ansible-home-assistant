@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Ian Copp
+  description: Install Home Assistant via pip3. Does nothing on non-macOS platforms.
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: MacOSX
+      versions:
+        - all
+  galaxy_tags:
+    - server
+
+dependencies:
+  - role: icopp.python3
+    when: ansible_os_family == "Darwin"
