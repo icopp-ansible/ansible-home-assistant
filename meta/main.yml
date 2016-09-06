@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Ian Copp
-  description: Install Home Assistant via pip3. Does nothing on non-macOS platforms.
+  description: Install Home Assistant via pip3.
   license: MIT
   min_ansible_version: 1.2
   platforms:

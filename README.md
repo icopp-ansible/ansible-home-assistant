@@ -1,10 +1,10 @@
 # ansible-home-assistant
 
-Install Home Assistant via pip3. Does nothing on non-macOS platforms.
+Install Home Assistant via pip3.
 
 ## Dependencies
 
-* [icopp.python3](https://github.com/icopp/ansible-python3) (included as repository dependency)
+* [icopp.python3](https://github.com/icopp/ansible-python3)
 
 ## Example Playbook
 
